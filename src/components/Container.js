@@ -9,9 +9,14 @@ function Container({
 }) {
   return (
     <div className={`container ${textPosition}`}>
+      <div className={`container ${contentPosition} ${textPosition}`}></div>
       {header ? <h2>{header}</h2> : null}
 
+    
       <div className={`container-children ${direction} ${contentPosition}`}>
+      <div
+        className={`container-children ${direction} ${direction} ${contentPosition}`}
+      >
         {children}
       </div>
     </div>
